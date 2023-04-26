@@ -17,7 +17,7 @@ public class Geographic_div extends StandardEntity {
     private Integer tsn;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "ID_TAXONOMIC_UNITS_ID")
+    @JoinColumn(name = "ID_TAXONOMIC_UNITS_ID", nullable = false)
     private Taxonomic_units id_taxonomic_units;
 
     public String getGeographic_value() {

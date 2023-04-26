@@ -63,6 +63,8 @@ create table TAXONOMY_TU_COMMENTS_LINKS (
     --
     id_taxonomic_units_id uuid not null,
     id_comments_id uuid not null,
+    TSN integer not null,
+    COMMENT_ID integer,
     --
     primary key (ID)
 )^
