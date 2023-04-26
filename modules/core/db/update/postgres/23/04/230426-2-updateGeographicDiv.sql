@@ -1,0 +1,1 @@
+alter table TAXONOMY_GEOGRAPHIC_DIV add column ID_TAXONOMIC_UNITS_ID uuid ;
