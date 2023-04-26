@@ -4,5 +4,6 @@
 
         <class>com.company.taxonomy.entity.Comments</class>
         <class>com.company.taxonomy.entity.Geographic_div</class>
+        <class>com.company.taxonomy.entity.Taxonomic_units</class>
     </persistence-unit>
 </persistence>
