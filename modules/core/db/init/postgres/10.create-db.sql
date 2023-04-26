@@ -29,7 +29,7 @@ create table TAXONOMY_GEOGRAPHIC_DIV (
     --
     GEOGRAPHIC_VALUE varchar(45) not null,
     TSN integer not null,
-    ID_TAXONOMIC_UNITS_ID uuid,
+    ID_TAXONOMIC_UNITS_ID uuid not null,
     --
     primary key (ID)
 )^
