@@ -5,5 +5,6 @@
         <class>com.company.taxonomy.entity.Comments</class>
         <class>com.company.taxonomy.entity.Geographic_div</class>
         <class>com.company.taxonomy.entity.Taxonomic_units</class>
+        <class>com.company.taxonomy.entity.Tu_comments_links</class>
     </persistence-unit>
 </persistence>

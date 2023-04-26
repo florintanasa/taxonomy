@@ -2,6 +2,8 @@ package com.company.taxonomy.entity;
 
 import com.haulmont.chile.core.annotations.Composition;
 import com.haulmont.cuba.core.entity.StandardEntity;
+import com.haulmont.cuba.core.entity.annotation.OnDelete;
+import com.haulmont.cuba.core.global.DeletePolicy;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -21,6 +23,10 @@ public class Taxonomic_units extends StandardEntity {
     @Composition
     @OneToMany(mappedBy = "id_taxonomic_units")
     private List<Geographic_div> Geographic_divs;
+    @Composition
+    @OnDelete(DeletePolicy.CASCADE)
+    @OneToMany(mappedBy = "id_taxonomic_units")
+    private List<Tu_comments_links> tu_comments_links;
 
     public Integer getTsn() {
         return tsn;
@@ -36,5 +42,13 @@ public class Taxonomic_units extends StandardEntity {
 
     public void setGeographic_divs(List<Geographic_div> geographic_divs) {
         Geographic_divs = geographic_divs;
+    }
+
+    public List<Tu_comments_links> getTu_comments_links() {
+        return tu_comments_links;
+    }
+
+    public void setTu_comments_links(List<Tu_comments_links> tu_comments_links) {
+        this.tu_comments_links = tu_comments_links;
     }
 }
