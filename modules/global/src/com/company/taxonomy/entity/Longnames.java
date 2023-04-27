@@ -20,7 +20,7 @@ public class Longnames extends StandardEntity {
     private Integer tsn;
 
     @NotNull
-    @Column(name = "COMPLETENAME", nullable = false)
+    @Column(name = "COMPLETENAME", length = 300, nullable = false)
     private String completename;
 
     @NotNull
