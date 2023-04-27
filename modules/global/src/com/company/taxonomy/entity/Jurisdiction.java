@@ -15,7 +15,11 @@ public class Jurisdiction extends StandardEntity {
     private Integer tsn;
 
     @NotNull
-    @Column(name = "ORIGIN", nullable = false)
+    @Column(name = "JURISDICTION_VALUE", nullable = false, length = 30)
+    private String jurisdiction_value;
+
+    @NotNull
+    @Column(name = "ORIGIN", nullable = false, length = 19)
     private String origin;
 
     @NotNull
@@ -45,5 +49,13 @@ public class Jurisdiction extends StandardEntity {
 
     public void setId_taxonomic_units(Taxonomic_units id_taxonomic_units) {
         this.id_taxonomic_units = id_taxonomic_units;
+    }
+
+    public String getJurisdiction_value() {
+        return jurisdiction_value;
+    }
+
+    public void setJurisdiction_value(String jurisdiction_value) {
+        this.jurisdiction_value = jurisdiction_value;
     }
 }
