@@ -28,6 +28,11 @@ public class Taxonomic_units extends StandardEntity {
     @OneToMany(mappedBy = "id_taxonomic_units")
     private List<Tu_comments_links> tu_comments_links;
 
+    @Composition
+    @OnDelete(DeletePolicy.CASCADE)
+    @OneToMany(mappedBy = "id_taxonomic_units")
+    private List<Jurisdiction> jurisdictions;
+
     public Integer getTsn() {
         return tsn;
     }
@@ -50,5 +55,13 @@ public class Taxonomic_units extends StandardEntity {
 
     public void setTu_comments_links(List<Tu_comments_links> tu_comments_links) {
         this.tu_comments_links = tu_comments_links;
+    }
+
+    public List<Jurisdiction> getJurisdictions() {
+        return jurisdictions;
+    }
+
+    public void setJurisdictions(List<Jurisdiction> jurisdictions) {
+        this.jurisdictions = jurisdictions;
     }
 }

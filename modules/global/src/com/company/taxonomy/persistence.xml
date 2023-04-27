@@ -7,5 +7,6 @@
         <class>com.company.taxonomy.entity.Taxonomic_units</class>
         <class>com.company.taxonomy.entity.Tu_comments_links</class>
         <class>com.company.taxonomy.entity.Longnames</class>
+        <class>com.company.taxonomy.entity.Jurisdiction</class>
     </persistence-unit>
 </persistence>
