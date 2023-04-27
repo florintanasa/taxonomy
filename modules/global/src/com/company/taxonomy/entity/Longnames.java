@@ -27,7 +27,7 @@ public class Longnames extends StandardEntity {
     @Composition
     @OnDelete(DeletePolicy.CASCADE)
     @OneToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "ID_TAXONOMIC_UNITS_ID")
+    @JoinColumn(name = "ID_TAXONOMIC_UNITS_ID", unique = true)
     private Taxonomic_units id_taxonomicUnits;
 
     public Integer getTsn() {
