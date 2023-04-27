@@ -28,7 +28,7 @@ public class Longnames extends StandardEntity {
     @OnDelete(DeletePolicy.CASCADE)
     @OneToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "ID_TAXONOMIC_UNITS_ID")
-    private Taxonomic_units id_taxonomic_units;
+    private Taxonomic_units id_taxonomicUnits;
 
     public Integer getTsn() {
         return tsn;
@@ -46,11 +46,11 @@ public class Longnames extends StandardEntity {
         this.completename = completename;
     }
 
-    public Taxonomic_units getId_taxonomic_units() {
-        return id_taxonomic_units;
+    public Taxonomic_units getId_taxonomicUnits() {
+        return id_taxonomicUnits;
     }
 
-    public void setId_taxonomic_units(Taxonomic_units id_taxonomic_units) {
-        this.id_taxonomic_units = id_taxonomic_units;
+    public void setId_taxonomicUnits(Taxonomic_units id_taxonomicUnits) {
+        this.id_taxonomicUnits = id_taxonomicUnits;
     }
 }
