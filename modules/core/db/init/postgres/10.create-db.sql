@@ -99,7 +99,8 @@ create table TAXONOMY_JURISDICTION (
     DELETED_BY varchar(50),
     --
     TSN integer not null,
-    ORIGIN varchar(255) not null,
+    JURISDICTION_VALUE varchar(30) not null,
+    ORIGIN varchar(19) not null,
     ID_TAXONOMIC_UNITS_ID uuid not null,
     --
     primary key (ID)
