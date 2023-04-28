@@ -9,7 +9,8 @@ import com.haulmont.cuba.core.global.DeletePolicy;
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
-@Table(name = "TAXONOMY_LONGNAMES")
+@Table(name = "TAXONOMY_LONGNAMES",
+            indexes = @Index(name = "index_ID_TAXONOMIC_UNITS_ID", columnList = "ID_TAXONOMIC_UNITS_ID", unique = true))
 @Entity(name = "taxonomy_Longnames")
 @NamePattern("%s|completename")
 public class Longnames extends StandardEntity {
