@@ -43,6 +43,12 @@ public class Taxonomic_units extends StandardEntity {
     @OneToMany(mappedBy = "id_taxonomic_units_accepted")
     private List<Synonym_links> synonym_links;
 
+
+    @Composition
+    @OnDelete(DeletePolicy.CASCADE)
+    @OneToMany(mappedBy = "id_taxonomic_units")
+    private List<Nodc_ids> nodc_ids;
+
     public Integer getTsn() {
         return tsn;
     }
@@ -89,5 +95,13 @@ public class Taxonomic_units extends StandardEntity {
 
     public void setSynonym_links(List<Synonym_links> synonym_links) {
         this.synonym_links = synonym_links;
+    }
+
+    public List<Nodc_ids> getNodc_ids() {
+        return nodc_ids;
+    }
+
+    public void setNodc_ids(List<Nodc_ids> nodc_ids) {
+        this.nodc_ids = nodc_ids;
     }
 }

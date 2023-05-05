@@ -9,5 +9,6 @@
         <class>com.company.taxonomy.entity.Longnames</class>
         <class>com.company.taxonomy.entity.Jurisdiction</class>
         <class>com.company.taxonomy.entity.Synonym_links</class>
+        <class>com.company.taxonomy.entity.Nodc_ids</class>
     </persistence-unit>
 </persistence>
