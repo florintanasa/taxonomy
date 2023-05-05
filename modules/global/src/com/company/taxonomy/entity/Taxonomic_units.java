@@ -33,6 +33,16 @@ public class Taxonomic_units extends StandardEntity {
     @OneToMany(mappedBy = "id_taxonomic_units")
     private List<Jurisdiction> jurisdictions;
 
+    @Composition
+    @OnDelete(DeletePolicy.CASCADE)
+    @OneToMany(mappedBy = "id_taxonomic_units")
+    private List<Synonym_links> synonymLinks;
+
+    @Composition
+    @OnDelete(DeletePolicy.CASCADE)
+    @OneToMany(mappedBy = "id_taxonomic_units_accepted")
+    private List<Synonym_links> synonym_links;
+
     public Integer getTsn() {
         return tsn;
     }
@@ -63,5 +73,21 @@ public class Taxonomic_units extends StandardEntity {
 
     public void setJurisdictions(List<Jurisdiction> jurisdictions) {
         this.jurisdictions = jurisdictions;
+    }
+
+    public List<Synonym_links> getSynonymLinks() {
+        return synonymLinks;
+    }
+
+    public void setSynonymLinks(List<Synonym_links> synonymLinks) {
+        this.synonymLinks = synonymLinks;
+    }
+
+    public List<Synonym_links> getSynonym_links() {
+        return synonym_links;
+    }
+
+    public void setSynonym_links(List<Synonym_links> synonym_links) {
+        this.synonym_links = synonym_links;
     }
 }
