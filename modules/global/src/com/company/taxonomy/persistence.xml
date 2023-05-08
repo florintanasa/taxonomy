@@ -11,5 +11,6 @@
         <class>com.company.taxonomy.entity.Synonym_links</class>
         <class>com.company.taxonomy.entity.Nodc_ids</class>
         <class>com.company.taxonomy.entity.Kingdoms</class>
+        <class>com.company.taxonomy.entity.Taxon_unit_types</class>
     </persistence-unit>
 </persistence>
