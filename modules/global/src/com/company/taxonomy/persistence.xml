@@ -10,5 +10,6 @@
         <class>com.company.taxonomy.entity.Jurisdiction</class>
         <class>com.company.taxonomy.entity.Synonym_links</class>
         <class>com.company.taxonomy.entity.Nodc_ids</class>
+        <class>com.company.taxonomy.entity.Kingdoms</class>
     </persistence-unit>
 </persistence>

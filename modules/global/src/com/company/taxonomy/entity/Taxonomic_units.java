@@ -5,10 +5,7 @@ import com.haulmont.cuba.core.entity.StandardEntity;
 import com.haulmont.cuba.core.entity.annotation.OnDelete;
 import com.haulmont.cuba.core.global.DeletePolicy;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import java.util.List;
 
@@ -48,6 +45,11 @@ public class Taxonomic_units extends StandardEntity {
     @OnDelete(DeletePolicy.CASCADE)
     @OneToMany(mappedBy = "id_taxonomic_units")
     private List<Nodc_ids> nodc_ids;
+
+    @NotNull
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "KINGDOM_ID", nullable = false)
+    private Kingdoms id_kingdoms;
 
     public Integer getTsn() {
         return tsn;
@@ -103,5 +105,13 @@ public class Taxonomic_units extends StandardEntity {
 
     public void setNodc_ids(List<Nodc_ids> nodc_ids) {
         this.nodc_ids = nodc_ids;
+    }
+
+    public Kingdoms getId_kingdoms() {
+        return id_kingdoms;
+    }
+
+    public void setId_kingdoms(Kingdoms id_kingdoms) {
+        this.id_kingdoms = id_kingdoms;
     }
 }

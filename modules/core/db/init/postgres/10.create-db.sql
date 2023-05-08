@@ -46,6 +46,7 @@ create table TAXONOMY_TAXONOMIC_UNITS (
     DELETED_BY varchar(50),
     --
     TSN integer not null,
+    KINGDOM_ID uuid not null,
     --
     primary key (ID)
 )^
@@ -143,3 +144,19 @@ create table TAXONOMY_NODC_IDS (
     primary key (ID)
 )^
 -- end TAXONOMY_NODC_IDS
+-- begin TAXONOMY_KINGDOMS
+create table TAXONOMY_KINGDOMS (
+    ID uuid,
+    VERSION integer not null,
+    CREATE_TS timestamp,
+    CREATED_BY varchar(50),
+    UPDATE_TS timestamp,
+    UPDATED_BY varchar(50),
+    DELETE_TS timestamp,
+    DELETED_BY varchar(50),
+    --
+    KINGDOM_NAME varchar(255) not null,
+    --
+    primary key (ID)
+)^
+-- end TAXONOMY_KINGDOMS
