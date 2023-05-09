@@ -1,0 +1,1 @@
+alter table TAXONOMY_TAXONOMIC_UNITS add column ID_TAXON_UNIT_TYPES uuid ;

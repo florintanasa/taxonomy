@@ -51,6 +51,11 @@ public class Taxonomic_units extends StandardEntity {
     @JoinColumn(name = "KINGDOM_ID", nullable = false)
     private Kingdoms id_kingdoms;
 
+    @NotNull
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "ID_TAXON_UNIT_TYPES", nullable = false)
+    private Taxon_unit_types id_taxon_unit_types;
+
     public Integer getTsn() {
         return tsn;
     }
@@ -113,5 +118,13 @@ public class Taxonomic_units extends StandardEntity {
 
     public void setId_kingdoms(Kingdoms id_kingdoms) {
         this.id_kingdoms = id_kingdoms;
+    }
+
+    public Taxon_unit_types getId_taxon_unit_types() {
+        return id_taxon_unit_types;
+    }
+
+    public void setId_taxon_unit_types(Taxon_unit_types id_taxon_unit_types) {
+        this.id_taxon_unit_types = id_taxon_unit_types;
     }
 }

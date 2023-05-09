@@ -47,6 +47,7 @@ create table TAXONOMY_TAXONOMIC_UNITS (
     --
     TSN integer not null,
     KINGDOM_ID uuid not null,
+    ID_TAXON_UNIT_TYPES uuid not null,
     --
     primary key (ID)
 )^
