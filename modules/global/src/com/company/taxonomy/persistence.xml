@@ -12,5 +12,6 @@
         <class>com.company.taxonomy.entity.Nodc_ids</class>
         <class>com.company.taxonomy.entity.Kingdoms</class>
         <class>com.company.taxonomy.entity.Taxon_unit_types</class>
+        <class>com.company.taxonomy.entity.Hierarchy</class>
     </persistence-unit>
 </persistence>
