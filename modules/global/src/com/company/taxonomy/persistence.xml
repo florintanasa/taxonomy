@@ -13,5 +13,6 @@
         <class>com.company.taxonomy.entity.Kingdoms</class>
         <class>com.company.taxonomy.entity.Taxon_unit_types</class>
         <class>com.company.taxonomy.entity.Hierarchy</class>
+        <class>com.company.taxonomy.entity.Strippedauthor</class>
     </persistence-unit>
 </persistence>
