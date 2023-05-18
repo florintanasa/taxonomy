@@ -56,7 +56,6 @@ public class Taxonomic_units extends StandardEntity {
     @JoinColumn(name = "ID_TAXON_UNIT_TYPES", nullable = false)
     private Taxon_unit_types id_taxon_unit_types;
 
-    @NotNull
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "ID_TAXON_AUTHORS_LKP")
     private Taxon_authors_lkp id_taxon_authors_lkp;
