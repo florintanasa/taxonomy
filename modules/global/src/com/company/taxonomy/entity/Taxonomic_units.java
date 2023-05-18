@@ -56,6 +56,14 @@ public class Taxonomic_units extends StandardEntity {
     @JoinColumn(name = "ID_TAXON_UNIT_TYPES", nullable = false)
     private Taxon_unit_types id_taxon_unit_types;
 
+    @NotNull
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "ID_TAXON_AUTHORS_LKP")
+    private Taxon_authors_lkp id_taxon_authors_lkp;
+
+    @Column(name = "TAXON_AUTHOR_ID")
+    private Integer taxon_author_id;
+
     public Integer getTsn() {
         return tsn;
     }
@@ -126,5 +134,21 @@ public class Taxonomic_units extends StandardEntity {
 
     public void setId_taxon_unit_types(Taxon_unit_types id_taxon_unit_types) {
         this.id_taxon_unit_types = id_taxon_unit_types;
+    }
+
+    public Taxon_authors_lkp getId_taxon_authors_lkp() {
+        return id_taxon_authors_lkp;
+    }
+
+    public void setId_taxon_authors_lkp(Taxon_authors_lkp id_taxon_authors_lkp) {
+        this.id_taxon_authors_lkp = id_taxon_authors_lkp;
+    }
+
+    public Integer getTaxon_author_id() {
+        return taxon_author_id;
+    }
+
+    public void setTaxon_author_id(Integer taxon_author_id) {
+        this.taxon_author_id = taxon_author_id;
     }
 }

@@ -14,5 +14,6 @@
         <class>com.company.taxonomy.entity.Taxon_unit_types</class>
         <class>com.company.taxonomy.entity.Hierarchy</class>
         <class>com.company.taxonomy.entity.Strippedauthor</class>
+        <class>com.company.taxonomy.entity.Taxon_authors_lkp</class>
     </persistence-unit>
 </persistence>
