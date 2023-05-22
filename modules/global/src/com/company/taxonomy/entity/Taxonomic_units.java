@@ -21,8 +21,8 @@ public class Taxonomic_units extends StandardEntity {
     @Column(name = "UNIT_IND1", length = 1)
     private String unit_ind1;
 
-   // @NotNull
-    @Column(name = "UNIT_NAME1", length = 35)
+    @NotNull
+    @Column(name = "UNIT_NAME1", length = 35, nullable = false)
     private String unit_name1;
 
     @Column(name = "UNIT_IND2", length = 1)
@@ -46,8 +46,8 @@ public class Taxonomic_units extends StandardEntity {
     @Column(name = "UNNAMED_TAXON_IND", length = 1)
     private String unnamed_taxon_ind;
 
-   // @NotNull
-    @Column(name = "USAGE", length = 12)
+    @NotNull
+    @Column(name = "USAGE", length = 12, nullable = false)
     private String usage;
 
     @Composition
