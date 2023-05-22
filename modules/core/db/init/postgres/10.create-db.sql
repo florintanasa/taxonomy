@@ -47,7 +47,7 @@ create table TAXONOMY_TAXONOMIC_UNITS (
     --
     TSN integer not null,
     UNIT_IND1 varchar(1),
-    UNIT_NAME1 varchar(35),
+    UNIT_NAME1 varchar(35) not null,
     UNIT_IND2 varchar(1),
     UNIT_NAME2 varchar(35),
     UNIT_IND3 varchar(7),
@@ -55,7 +55,7 @@ create table TAXONOMY_TAXONOMIC_UNITS (
     UNIT_IND4 varchar(7),
     UNIT_NAME4 varchar(35),
     UNNAMED_TAXON_IND varchar(1),
-    USAGE varchar(12),
+    USAGE varchar(12) not null,
     KINGDOM_ID uuid not null,
     ID_TAXON_UNIT_TYPES uuid not null,
     ID_TAXON_AUTHORS_LKP uuid,
