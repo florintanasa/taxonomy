@@ -1,0 +1,10 @@
+alter table TAXONOMY_TAXONOMIC_UNITS add column UNIT_IND1 varchar(1) ;
+alter table TAXONOMY_TAXONOMIC_UNITS add column UNNAMED_TAXON_IND varchar(1) ;
+alter table TAXONOMY_TAXONOMIC_UNITS add column UNIT_IND2 varchar(1) ;
+alter table TAXONOMY_TAXONOMIC_UNITS add column UNIT_NAME3 varchar(35) ;
+alter table TAXONOMY_TAXONOMIC_UNITS add column UNIT_NAME1 varchar(35) ;
+alter table TAXONOMY_TAXONOMIC_UNITS add column USAGE varchar(12) ;
+alter table TAXONOMY_TAXONOMIC_UNITS add column UNIT_IND4 varchar(7) ;
+alter table TAXONOMY_TAXONOMIC_UNITS add column UNIT_NAME2 varchar(35) ;
+alter table TAXONOMY_TAXONOMIC_UNITS add column UNIT_NAME4 varchar(35) ;
+alter table TAXONOMY_TAXONOMIC_UNITS add column UNIT_IND3 varchar(7) ;

@@ -17,6 +17,39 @@ public class Taxonomic_units extends StandardEntity {
     @NotNull
     @Column(name = "TSN", nullable = false)
     private Integer tsn;
+
+    @Column(name = "UNIT_IND1", length = 1)
+    private String unit_ind1;
+
+   // @NotNull
+    @Column(name = "UNIT_NAME1", length = 35)
+    private String unit_name1;
+
+    @Column(name = "UNIT_IND2", length = 1)
+    private String unit_ind2;
+
+    @Column(name = "UNIT_NAME2", length = 35)
+    private String unit_name2;
+
+    @Column(name = "UNIT_IND3", length = 7)
+    private String unit_ind3;
+
+    @Column(name = "UNIT_NAME3", length = 35)
+    private String unit_name3;
+
+    @Column(name = "UNIT_IND4", length = 7)
+    private String unit_ind4;
+
+    @Column(name = "UNIT_NAME4", length = 35)
+    private String unit_name4;
+
+    @Column(name = "UNNAMED_TAXON_IND", length = 1)
+    private String unnamed_taxon_ind;
+
+   // @NotNull
+    @Column(name = "USAGE", length = 12)
+    private String usage;
+
     @Composition
     @OneToMany(mappedBy = "id_taxonomic_units")
     private List<Geographic_div> Geographic_divs;
@@ -69,6 +102,86 @@ public class Taxonomic_units extends StandardEntity {
 
     public void setTsn(Integer tsn) {
         this.tsn = tsn;
+    }
+
+    public String getUnit_ind1() {
+        return unit_ind1;
+    }
+
+    public void setUnit_ind1(String unit_ind1) {
+        this.unit_ind1 = unit_ind1;
+    }
+
+    public String getUnit_name1() {
+        return unit_name1;
+    }
+
+    public void setUnit_name1(String unit_name1) {
+        this.unit_name1 = unit_name1;
+    }
+
+    public String getUnit_ind2() {
+        return unit_ind2;
+    }
+
+    public void setUnit_ind2(String unit_ind2) {
+        this.unit_ind2 = unit_ind2;
+    }
+
+    public String getUnit_name2() {
+        return unit_name2;
+    }
+
+    public void setUnit_name2(String unit_name2) {
+        this.unit_name2 = unit_name2;
+    }
+
+    public String getUnit_ind3() {
+        return unit_ind3;
+    }
+
+    public void setUnit_ind3(String unit_ind3) {
+        this.unit_ind3 = unit_ind3;
+    }
+
+    public String getUnit_name3() {
+        return unit_name3;
+    }
+
+    public void setUnit_name3(String unit_name3) {
+        this.unit_name3 = unit_name3;
+    }
+
+    public String getUnit_ind4() {
+        return unit_ind4;
+    }
+
+    public void setUnit_ind4(String unit_ind4) {
+        this.unit_ind4 = unit_ind4;
+    }
+
+    public String getUnit_name4() {
+        return unit_name4;
+    }
+
+    public void setUnit_name4(String unit_name4) {
+        this.unit_name4 = unit_name4;
+    }
+
+    public String getUnnamed_taxon_ind() {
+        return unnamed_taxon_ind;
+    }
+
+    public void setUnnamed_taxon_ind(String unnamed_taxon_ind) {
+        this.unnamed_taxon_ind = unnamed_taxon_ind;
+    }
+
+    public String getUsage() {
+        return usage;
+    }
+
+    public void setUsage(String usage) {
+        this.usage = usage;
     }
 
     public List<Geographic_div> getGeographic_divs() {
