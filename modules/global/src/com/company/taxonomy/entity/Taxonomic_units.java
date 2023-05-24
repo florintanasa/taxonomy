@@ -50,6 +50,21 @@ public class Taxonomic_units extends StandardEntity {
     @Column(name = "USAGE", length = 12, nullable = false)
     private String usage;
 
+    @Column(name = "UNACCEPT_REASON", length = 50)
+    private String unaccept_reason;
+
+    @Column(name = "CREDIBILITY_RTNG", length = 40)
+    private String credibility_rtng;
+
+    @Column(name = "COMPLETENESS_RTNG", length = 10)
+    private String completeness_rtng;
+
+    @Column(name = "CURRENCY_RATING", length = 7)
+    private String currency_rating;
+
+    @Column(name = "PHYLO_SORT_SEQ")
+    private Integer phylo_sort_seq;
+
     @Composition
     @OneToMany(mappedBy = "id_taxonomic_units")
     private List<Geographic_div> Geographic_divs;
@@ -182,6 +197,46 @@ public class Taxonomic_units extends StandardEntity {
 
     public void setUsage(String usage) {
         this.usage = usage;
+    }
+
+    public String getUnaccept_reason() {
+        return unaccept_reason;
+    }
+
+    public void setUnaccept_reason(String unaccept_reason) {
+        this.unaccept_reason = unaccept_reason;
+    }
+
+    public String getCredibility_rtng() {
+        return credibility_rtng;
+    }
+
+    public void setCredibility_rtng(String credibility_rtng) {
+        this.credibility_rtng = credibility_rtng;
+    }
+
+    public String getCompleteness_rtng() {
+        return completeness_rtng;
+    }
+
+    public void setCompleteness_rtng(String completeness_rtng) {
+        this.completeness_rtng = completeness_rtng;
+    }
+
+    public String getCurrency_rating() {
+        return currency_rating;
+    }
+
+    public void setCurrency_rating(String currency_rating) {
+        this.currency_rating = currency_rating;
+    }
+
+    public Integer getPhylo_sort_seq() {
+        return phylo_sort_seq;
+    }
+
+    public void setPhylo_sort_seq(Integer phylo_sort_seq) {
+        this.phylo_sort_seq = phylo_sort_seq;
     }
 
     public List<Geographic_div> getGeographic_divs() {
