@@ -61,6 +61,7 @@ create table TAXONOMY_TAXONOMIC_UNITS (
     COMPLETENESS_RTNG varchar(10),
     CURRENCY_RATING varchar(7),
     PHYLO_SORT_SEQ integer,
+    INITIAL_TIME_STAMP timestamp,
     KINGDOM_ID uuid not null,
     ID_TAXON_UNIT_TYPES uuid not null,
     ID_TAXON_AUTHORS_LKP uuid,

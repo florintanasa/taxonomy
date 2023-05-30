@@ -7,6 +7,7 @@ import com.haulmont.cuba.core.global.DeletePolicy;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
+import java.util.Date;
 import java.util.List;
 
 @Table(name = "TAXONOMY_TAXONOMIC_UNITS")
@@ -64,6 +65,9 @@ public class Taxonomic_units extends StandardEntity {
 
     @Column(name = "PHYLO_SORT_SEQ")
     private Integer phylo_sort_seq;
+
+    @Column(name = "INITIAL_TIME_STAMP")
+    private Date initial_time_stamp;
 
     @Composition
     @OneToMany(mappedBy = "id_taxonomic_units")
@@ -317,5 +321,13 @@ public class Taxonomic_units extends StandardEntity {
 
     public void setTaxon_author_id(Integer taxon_author_id) {
         this.taxon_author_id = taxon_author_id;
+    }
+
+    public Date getInitial_time_stamp() {
+        return initial_time_stamp;
+    }
+
+    public void setInitial_time_stamp(Date initial_time_stamp) {
+        this.initial_time_stamp = initial_time_stamp;
     }
 }
